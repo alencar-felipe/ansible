@@ -3,3 +3,4 @@
     name:
       - gnome-shell
       - gdm
+      - alacritty
