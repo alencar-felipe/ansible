@@ -17,6 +17,10 @@
   user:
     name: felipe
     state: present
+    password: $6$/E9TdqBxeQI2k$pMCyMyA0QG8f4DVj/HNz7N/AhxzUra37AFxTJrWmdrMKRVxsq9kbx4oBzhgb2atN715CrrUBWI6/KgBg4s.Qs.
+
+- name: expire user felipe password
+  shell: passwd --expire felipe
 
 - name: set up sudo for user felipe
   copy: 
