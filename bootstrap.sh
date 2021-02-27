@@ -46,10 +46,9 @@ mount $root_partition /mnt
 
 timedatectl set-ntp true
 
-pacstrap /mnt base linux linux-firmware grub efibootmgr dhcpcd sudo nano git
+pacstrap /mnt base linux linux-firmware grub efibootmgr dhcpcd sudo nano git ansible
 
 genfstab -U /mnt >> /mnt/etc/fstab
-
 
 echo $host_name > /mnt/etc/hostname
 
@@ -66,4 +65,22 @@ mount $efi_partition /boot/efi
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
+systemctl enable dhcpcd.service
+
 EOF
+
+cat <<EOT>> /mnt/root/.bashrc
+
+if [ "\$(stat -c %d:%i /)" == "\$(stat -c %d:%i /proc/1/root/.)" ]; then
+  ansible-pull -U https://github.com/alencar-felipe/ansible
+fi
+
+EOT
+
+cat <<EOT>> /mnt/etc/systemd/system/getty@tty1.service.d/override.conf
+
+[Service]
+ExecStart=
+ExecStart=-/usr/bin/agetty --autologin root --noclear %I $TERM
+
+EOT
