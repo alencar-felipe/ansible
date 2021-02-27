@@ -1,0 +1,4 @@
+- name: Enable gdm service
+  ansible.builtin.service:
+    name: gdm
+    enabled: yes
