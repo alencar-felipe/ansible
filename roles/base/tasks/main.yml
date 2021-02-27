@@ -1,5 +1,2 @@
-- name: install packages
-  package: 
-    name:
-      - htop
-      - cronie
+- name: include roles/base/tasks/packages.yml
+ include: packages.yml
