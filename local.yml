@@ -16,11 +16,12 @@
         system: yes
 
     - name: set up sudo for ansible user
-      copy: files/sudoer_ansible
-      dest: /etc/sudoers.d/ansible
-      owner: root
-      group: root
-      mode: 0440
+      copy: 
+        src: files/sudoer_ansible
+        dest: /etc/sudoers.d/ansible
+        owner: root
+        group: root
+        mode: 0440
 
     - name: ansible-pull cron job
       cron:
