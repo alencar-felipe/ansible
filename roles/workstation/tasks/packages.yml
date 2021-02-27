@@ -1,0 +1,4 @@
+- name: install workstation packages
+  package: 
+    name:
+      - gnome-shell

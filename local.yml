@@ -3,3 +3,8 @@
   become: true
   roles:
     - base
+    
+- hosts: workstation
+  become: true
+  roles:
+    - workstation
