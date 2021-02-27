@@ -10,3 +10,16 @@
     owner: root
     group: root
     mode: 0440
+    
+- name: add ansible user
+  user:
+    name: felipe
+    system: yes
+
+- name: set up sudo for user felipe
+  copy: 
+    src: ../files/sudoer_ansible
+    dest: /etc/sudoers.d/felipe
+    owner: root
+    group: root
+    mode: 0440
