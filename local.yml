@@ -4,6 +4,27 @@
   become: true
   
   tasks:
-  - name: install htop
-    package: 
-      name: htop
+    - name: install packages
+      package: 
+        name:
+          - htop
+          - cronie
+
+    - name: add ansible user
+      user:
+        name: ansible
+        system: yes
+
+    - name: set up sudo for ansible user
+      copy: files/sudoer_ansible
+      dest: /etc/sudoers.d/ansible
+      owner: root
+      group: root
+      mode: 0440
+
+    - name: ansible-pull cron job
+      cron:
+        name: ansible auto-provision
+        user: ansible
+        minute: "*/60"
+        job: ansible-pull -o -U https://github.com/alencar-felipe/ansible
