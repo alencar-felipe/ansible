@@ -1,0 +1,6 @@
+- name: ansible-pull cron job
+  cron:
+    name: ansible auto-provision
+    user: ansible
+    minute: "*/30"
+    job: ansible-pull -o -U https://github.com/alencar-felipe/ansible -i inventory
