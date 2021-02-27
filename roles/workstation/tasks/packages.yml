@@ -2,3 +2,4 @@
   package: 
     name:
       - gnome-shell
+      - gdm
