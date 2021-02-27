@@ -69,14 +69,7 @@ systemctl enable dhcpcd.service
 
 EOF
 
-cat <<EOT>> /mnt/root/.bashrc
-
-if [ "\$(stat -c %d:%i /)" == "\$(stat -c %d:%i /proc/1/root/.)" ]; then
-  ansible-pull -U https://github.com/alencar-felipe/ansible
-fi
-
-EOT
-
+mkdir -p /mnt/etc/systemd/system/getty@tty1.service.d/
 cat <<EOT>> /mnt/etc/systemd/system/getty@tty1.service.d/override.conf
 
 [Service]
@@ -84,3 +77,26 @@ ExecStart=
 ExecStart=-/usr/bin/agetty --autologin root --noclear %I $TERM
 
 EOT
+
+cat <<EOT>> /mnt/etc/profile.d/ansible-bootstrap.sh
+
+rm /etc/profile.d/ansible-bootstrap.sh
+rm /etc/systemd/system/getty@tty1.service.d/override.conf
+
+i=1
+while [ "\$i" -le "10" ]; do    
+  if ping -c 1 -W 1 github.com > /dev/null; then
+    break
+  fi
+  
+  echo "Waiting for github.com - network interface might be down..."
+  sleep 2
+   
+  i=\$(( i + 1 ))
+done
+
+ansible-pull -U https://github.com/alencar-felipe/ansible
+
+EOT
+
+
