@@ -25,6 +25,6 @@
         job: ansible-pull -o -U https://github.com/alencar-felipe/ansible
        
 - hosts: all
-   become: true
-   roles:
-     - base
+  become: true
+  roles:
+    - base
