@@ -1,1 +1,1 @@
-felipe ALL=(ALL) NOPASSWD: ALL
+felipe ALL=(ALL:ALL) ALL
