@@ -1,2 +1,5 @@
 - name: include roles/base/tasks/packages.yml
   include: packages.yml
+  
+- name: include roles/base/tasks/users.yml
+  include: users.yml

@@ -4,19 +4,6 @@
   become: true
      
   tasks:
-    - name: add ansible user
-      user:
-        name: ansible
-        system: yes
-
-    - name: set up sudo for ansible user
-      copy: 
-        src: files/sudoer_ansible
-        dest: /etc/sudoers.d/ansible
-        owner: root
-        group: root
-        mode: 0440
-
     - name: ansible-pull cron job
       cron:
         name: ansible auto-provision
