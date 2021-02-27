@@ -1,14 +1,11 @@
 ---
-- hosts: localhost
+- hosts: all
   connection: local
   become: true
   
   tasks:
-    - name: install packages
-      package: 
-        name:
-          - htop
-          - cronie
+    - name: include packages/core.yml
+      include: packages/core.yml
 
     - name: add ansible user
       user:
