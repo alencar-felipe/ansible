@@ -2,6 +2,6 @@ all:
   hosts:
     localhost
   children:
-    workstations:
+    workstation:
       hosts:
         reliant
