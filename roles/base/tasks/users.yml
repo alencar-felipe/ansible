@@ -1,7 +1,9 @@
 - name: add ansible user
   user:
     name: ansible
+    state: present
     system: yes
+    createhome: no
 
 - name: set up sudo for ansible user
   copy: 
@@ -14,7 +16,7 @@
 - name: add user felipe
   user:
     name: felipe
-    system: yes
+    state: present
 
 - name: set up sudo for user felipe
   copy: 
