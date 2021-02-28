@@ -30,3 +30,8 @@
       - gnome-calculator
       - simple-scan
       
+- name: install workstation aur packages
+  aur:
+    name: scrcpy
+    user: ansible
+    
