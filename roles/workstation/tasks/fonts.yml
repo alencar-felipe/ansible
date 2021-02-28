@@ -1,0 +1,12 @@
+- name: install workstation font packages
+  package: 
+    name:
+      - ttf-liberation ttf-roboto ttf-fira-code
+      
+- name: install workstation aur font packages
+  aur:
+    name:
+     - ttf-times-new-roman
+     
+    user: ansible
+    
