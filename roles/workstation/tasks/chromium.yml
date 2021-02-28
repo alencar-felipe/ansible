@@ -1,3 +1,8 @@
+- name: creates chromium extensions directory
+  file:
+    path: /etc/chromium/policies/managed/
+    state: directory
+    
 - name: chromium extensions
   copy: 
     src: ../files/extensions.json
