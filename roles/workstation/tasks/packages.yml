@@ -11,6 +11,7 @@
       - networkmanager
       - gvfs-smb 
       - cups
+      - xterm
       - alacritty
       - nautilus
       - evince
