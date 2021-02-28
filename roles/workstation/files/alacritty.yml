@@ -8,13 +8,13 @@ window:
     x: 25
     y: 25
     
-  decorations: none
+  #decorations: none
   
 scrolling:
   history: 10000
   multiplier: 3
   
-background_opacity: .8
+background_opacity: .95
 window.dynamic_title: true
 
 # Font Customization
