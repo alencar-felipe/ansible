@@ -1,4 +1,16 @@
 - name: Enable gdm service
-  ansible.builtin.service:
+  service:
     name: gdm
     enabled: yes
+    
+- name: Enable NetworkManager service
+  service:
+    name: NetworkManager
+    enabled: yes
+    state: started
+    
+- name: Enable cups service
+  service:
+    name: org.cups.cupsd
+    enabled: yes
+    state: started 
