@@ -12,6 +12,7 @@
       - gvfs-smb 
       - cups
       - alacritty
+      - nautilus
       - chromium
       - vlc
       - libreoffice
