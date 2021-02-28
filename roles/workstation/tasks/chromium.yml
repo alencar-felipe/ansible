@@ -9,4 +9,4 @@
     dest: /etc/chromium/policies/managed/extensions.json
     owner: root
     group: root
-    mode: 0440
+    mode: 0444
