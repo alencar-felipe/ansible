@@ -11,14 +11,17 @@
     owner: root
     group: root
     mode: 0440
+
     
 - name: add user felipe
+  run_once: true
   user:
     name: felipe
     state: present
     password: $6$/E9TdqBxeQI2k$pMCyMyA0QG8f4DVj/HNz7N/AhxzUra37AFxTJrWmdrMKRVxsq9kbx4oBzhgb2atN715CrrUBWI6/KgBg4s.Qs.
 
 - name: expire user felipe password
+  run_once: true
   shell: passwd --expire felipe
 
 - name: set up sudo for user felipe
