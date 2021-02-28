@@ -6,6 +6,9 @@
 
 - name: include roles/workstation/tasks/gdm.yml
   include: gdm.yml
+
+- name: include roles/workstation/tasks/alacritty.yml
+  include: alacritty.yml
   
 - name: include roles/workstation/tasks/chromium.yml
   include: chromium.yml

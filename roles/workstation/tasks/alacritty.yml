@@ -1,0 +1,12 @@
+- name: create alacritty config directory
+  file:
+    path: /home/felipe/.config/alacritty/
+    state: directory
+    
+- name: configure alacritty
+  copy: 
+    src: ../files/alacritty.yml
+    dest: /home/felipe/.config/alacritty/alacritty.yml
+    owner: felipe
+    group: felipe
+    mode: 0444
