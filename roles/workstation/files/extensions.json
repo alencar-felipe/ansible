@@ -1,0 +1,11 @@
+{
+    "ExtensionInstallForcelist": [
+    "gphhapmejobijbbhgpjhcjognlahblep;https://clients2.google.com/service/update2/crx", //GNOME Shell Integration
+    "cfhdojbkjhnklbpkdaibdccddilifddb;https://clients2.google.com/service/update2/crx", //Adblock Plus
+    "chphlpgkkbolifaimnlloiipkdnihall;https://clients2.google.com/service/update2/crx", //OneTab
+    "hkgfoiooedgoejojocmhlaklaeopbecg;https://clients2.google.com/service/update2/crx", //Picture-in-Picture Extension (by Google)
+    "klbibkeccnjlkjkiokjodocebajanakg;https://clients2.google.com/service/update2/crx", //The Great Suspender
+    "nffaoalbilbmmfgbnbgppjihopabppdk;https://clients2.google.com/service/update2/crx", //Video Speed Controller
+    "jghecgabfgfdldnmbfkhmffcabddioke;https://clients2.google.com/service/update2/crx", //Volume Master
+    ],
+}

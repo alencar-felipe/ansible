@@ -3,3 +3,6 @@
  
 - name: include roles/workstation/tasks/services.yml
   include: services.yml
+  
+- name: include roles/workstation/tasks/chromium.yml
+  include: chromium.yml

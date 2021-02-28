@@ -1,0 +1,7 @@
+- name: chromium extensions
+  copy: 
+    src: ../files/extensions.json
+    dest: /etc/chromium/policies/managed/extensions.json
+    owner: root
+    group: root
+    mode: 0440
