@@ -1,12 +1,15 @@
-- name: install packages
+- name: install base packages
   package: 
     name:
       - git
       - ansible
       - cronie
       - wget
+      - curl
       - nano
       - vim
+      - man-db
+      - man-pages
       - usbutils
       - net-tools
       - nmap
@@ -17,3 +20,12 @@
       - openvpn
       - python
       - docker
+      
+- name: install yay package manager
+  shell: |
+    pacman -Sy --noconfirm go base-devel fakeroot
+    git clone https://aur.archlinux.org/yay.git
+    cd yay
+    makepkg -si
+    cd ~
+    sudo rm -r yay
