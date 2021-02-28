@@ -13,6 +13,7 @@
       - cups
       - alacritty
       - nautilus
+      - evince
       - chromium
       - vlc
       - libreoffice
