@@ -32,6 +32,8 @@
       - obs-studio
       - gnome-calculator
       - simple-scan
+      - powerline
+      - powerline-fonts-git
       
 - name: install workstation aur packages
   aur:
