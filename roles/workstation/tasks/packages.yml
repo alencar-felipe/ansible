@@ -18,7 +18,6 @@
       - inkscape
       - gimp
       - gparted
-      - code
       - transmission-gtk
       - gedit
       - kdenlive
@@ -32,6 +31,11 @@
       
 - name: install workstation aur packages
   aur:
-    name: scrcpy
+    name:
+     - scrcpy
+     - teamviewer-latest
+     - debtap
+     - vscodium-bin
+     
     user: ansible
     
