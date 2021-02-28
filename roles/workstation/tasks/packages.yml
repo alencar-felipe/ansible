@@ -33,7 +33,6 @@
       - gnome-calculator
       - simple-scan
       - powerline
-      - powerline-fonts-git
       
 - name: install workstation aur packages
   aur:
@@ -42,6 +41,7 @@
      - teamviewer-latest
      - debtap
      - vscodium-bin
+     - powerline-fonts-git
      
     user: ansible
     
