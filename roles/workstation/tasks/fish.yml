@@ -2,5 +2,5 @@
   shell: |
     curl -L https://get.oh-my.fish > install
     chmod +x install
-    fish -c "install -y"
+    fish -c "./install -y"
 
