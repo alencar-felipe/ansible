@@ -1,9 +1,12 @@
 - name: include roles/workstation/tasks/packages.yml
   include: packages.yml
- 
+
+- name: include roles/workstation/tasks/users.yml
+  include: users.yml
+   
 - name: include roles/workstation/tasks/fonts.yml
   include: fonts.yml
-  
+ 
 - name: include roles/workstation/tasks/services.yml
   include: services.yml
 

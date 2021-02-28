@@ -11,6 +11,7 @@
       - networkmanager
       - gvfs-smb 
       - cups
+      - fish
       - xterm
       - alacritty
       - nautilus
