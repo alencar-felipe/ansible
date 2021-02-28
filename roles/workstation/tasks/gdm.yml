@@ -1,0 +1,7 @@
+- name: disable wayland
+  copy: 
+    src: ../files/custom.conf
+    dest: /etc/gdm/custom.conf
+    owner: root
+    group: root
+    mode: 0444
