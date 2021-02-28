@@ -1,5 +1,19 @@
 - name: install packages
   package: 
     name:
-      - htop
+      - git
+      - ansible
       - cronie
+      - wget
+      - nano
+      - vim
+      - usbutils
+      - net-tools
+      - nmap
+      - lsof
+      - openssh
+      - rsync
+      - ntfs-3g
+      - openvpn
+      - python
+      - docker
