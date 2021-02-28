@@ -3,7 +3,6 @@
     name: ansible
     state: present
     system: yes
-    createhome: no
 
 - name: set up sudo for ansible user
   copy: 
