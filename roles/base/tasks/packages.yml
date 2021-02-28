@@ -20,3 +20,6 @@
       - openvpn
       - python
       - docker
+      - fakeroot
+      - gcc
+      - make
