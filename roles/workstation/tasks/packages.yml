@@ -33,6 +33,7 @@
       - gnome-calculator
       - simple-scan
       - powerline
+      - python-psutil
       
 - name: install workstation aur packages
   aur:
