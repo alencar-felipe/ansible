@@ -12,6 +12,7 @@
       - man-pages
       - usbutils
       - net-tools
+      - inetutils
       - nmap
       - lsof
       - openssh
