@@ -9,6 +9,7 @@
   aur:
     name:
      - ttf-times-new-roman
+     - nerd-fonts-fira-code 
      
     user: ansible
     
