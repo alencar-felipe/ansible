@@ -3,4 +3,5 @@
     curl -L https://get.oh-my.fish > install
     chmod +x install
     fish -c "./install --noninteractive -y"
-
+  become: true
+  become_user: felipe

@@ -28,3 +28,6 @@
     owner: root
     group: root
     mode: 0440
+    
+- name: recursive ownership of home directory for felipe
+  shell: chown -R felipe /home/felipe
