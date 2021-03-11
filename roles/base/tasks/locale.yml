@@ -1,10 +1,12 @@
-- name: Ensure the locale exists
+- name: Ensure the locale en_US.UTF-8 enexists
   locale_gen:
-    name:
-      - en_US.UTF-8
-      - pt_BR.UTF-8
-     
+    name: en_US.UTF-8
     state: present
     
-- name: set as default locale
+- name: Ensure the locale pt_BR.UTF-8 enexists
+  locale_gen:
+    name: pt_BR.UTF-8
+    state: present
+    
+- name: set default locale
   command: localectl set-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
