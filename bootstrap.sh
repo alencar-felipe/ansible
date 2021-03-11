@@ -95,7 +95,7 @@ while [ "\$i" -le "10" ]; do
   i=\$(( i + 1 ))
 done
 
-ansible-pull -U https://github.com/alencar-felipe/ansible -i inventory
+ansible-pull -U https://github.com/alencar-felipe/ansible
 
 EOT
 
