@@ -5,3 +5,11 @@
     fish -c "./install --noninteractive -y"
   become: true
   become_user: felipe
+  
+- name: enable powerline on fish
+  copy: 
+    src: ../files/powerline.fish
+    dest: /home/felipe/.config/fish/conf.d/powerline.fish
+    owner: felipe
+    group: felipe
+    mode: 0444

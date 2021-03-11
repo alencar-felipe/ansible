@@ -42,7 +42,6 @@
      - teamviewer-latest
      - debtap
      - vscodium-bin
-     - powerline-fonts-git
      
     user: ansible
     
