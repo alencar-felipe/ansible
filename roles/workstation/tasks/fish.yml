@@ -12,4 +12,3 @@
     dest: /home/felipe/.config/fish/conf.d/powerline.fish
     owner: felipe
     group: felipe
-    mode: 0444
