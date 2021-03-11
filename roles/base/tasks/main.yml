@@ -1,3 +1,6 @@
+- name: include roles/base/tasks/locale.yml
+  include: locale.yml
+  
 - name: include roles/base/tasks/packages.yml
   include: packages.yml
   
