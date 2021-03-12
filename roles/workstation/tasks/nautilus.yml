@@ -1,0 +1,11 @@
+- name: Set Nautilus icon view zoom level
+  become_user: felipe
+  dconf:
+    key: "/org/gnome/nautilus/icon-view/default-zoom-level"
+    value: "'standard'"
+    
+- name: Set Nautilus list view zoom level
+  become_user: felipe
+  dconf:
+    key: "/org/gnome/nautilus/list-view/default-zoom-level"
+    value: "'small'"
