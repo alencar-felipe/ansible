@@ -2,7 +2,7 @@
   copy:
     src: files/wallpapers/
     dest: /home/file/wallpapers/
-    owner: felipe group=felipe mode=600
+    owner: felipe
 
 - name: Set GNOME Wallpaper
   become_user: felipe
