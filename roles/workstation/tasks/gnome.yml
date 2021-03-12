@@ -15,3 +15,9 @@
   dconf:
     key: "/org/gnome/desktop/interface/icon-theme"
     value: "'Pop'"
+
+- name: Set gnome favorite apps
+  become_user: felipe
+  dconf:
+    key: "/org/gnome/shell/favorite-apps"
+    value: "['chromium.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'VSCodium.desktop']"
