@@ -3,3 +3,7 @@
   dconf:
     key: "/org/gnome/desktop/background/picture-uri" 
     value: "'file:///home/felipe/.wallpaper'"
+    
+- name: Set GTK theme
+  become_user: jay
+  dconf: key="/org/gnome/desktop/interface/gtk-theme" value="'Pop-dark'"

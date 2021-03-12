@@ -42,6 +42,7 @@
      - teamviewer-latest
      - debtap
      - vscodium-bin
+     - pop-gtk-theme
      
     user: ansible
     
