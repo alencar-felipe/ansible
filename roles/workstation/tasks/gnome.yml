@@ -1,7 +1,7 @@
 - name: Copy wallpaper file
   copy:
-    src: files/wallpapers/
-    dest: /home/file/wallpapers/
+    src: ../files/wallpapers/
+    dest: /home/felipe/wallpapers/
     owner: felipe
 
 - name: Set GNOME Wallpaper
