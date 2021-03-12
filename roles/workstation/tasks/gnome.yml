@@ -1,11 +1,11 @@
 - name: Copy wallpaper file
   copy:
-    src: files/wallpaper.jpg
-    dest: /home/file/.wallpaper.jpg
+    src: files/wallpapers/
+    dest: /home/file/wallpapers/
     owner: felipe group=felipe mode=600
 
 - name: Set GNOME Wallpaper
   become_user: felipe
   dconf:
     key: "/org/gnome/desktop/background/picture-uri" 
-    value: "'file:///home/jay/.wallpaper.jpg'"
+    value: "'file:///home/felipe/wallpapers/1.jpg'"

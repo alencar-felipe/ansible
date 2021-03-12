@@ -15,6 +15,9 @@
 
 - name: include roles/workstation/tasks/gdm.yml
   include: gdm.yml
+  
+- name: include roles/workstation/tasks/gnome.yml
+  include: gnome.yml
 
 - name: include roles/workstation/tasks/alacritty.yml
   include: alacritty.yml
