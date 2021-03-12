@@ -1,0 +1,5 @@
+- name: Copy wallpapers
+  copy:
+    src: ../files/wallpapers/
+    dest: /usr/share/wallpapers/
+

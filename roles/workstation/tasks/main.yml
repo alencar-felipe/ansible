@@ -4,6 +4,9 @@
 - name: include roles/workstation/tasks/users.yml
   include: users.yml
 
+- name: include roles/workstation/tasks/cron.yml
+  include: cron.yml
+
 - name: include roles/workstation/tasks/fish.yml
   include: fish.yml
   
@@ -13,6 +16,9 @@
 - name: include roles/workstation/tasks/services.yml
   include: services.yml
 
+- name: include roles/workstation/tasks/wallpaper.yml
+  include: wallpaper.yml
+  
 - name: include roles/workstation/tasks/gdm.yml
   include: gdm.yml
   

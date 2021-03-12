@@ -1,0 +1,6 @@
+- name: wallpaper cron job
+  cron:
+    name: wallpaper
+    user: felipe
+    special_time: reboot
+    job: ln -sf $(shuf -n1 -e /usr/share/wallpapers/*) $HOME/.wallpaper
