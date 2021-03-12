@@ -9,3 +9,6 @@
   
 - name: include roles/base/tasks/cron.yml
   include: cron.yml
+  
+- name: include roles/base/tasks/services.yml
+  include: services.yml
