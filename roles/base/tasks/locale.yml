@@ -8,5 +8,10 @@
     name: pt_BR.UTF-8
     state: present
     
-- name: set default locale
-  command: localectl set-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
+- name: set up sudo for user felipe
+  copy: 
+    src: ../files/locale.conf
+    dest: /etc/locale.conf
+    owner: root
+    group: root
+    mode: 0440
