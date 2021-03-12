@@ -9,3 +9,9 @@
   dconf:
     key: "/org/gnome/desktop/interface/gtk-theme"
     value: "'Pop-dark'"
+    
+- name: Set GTK icon theme
+  become_user: felipe
+  dconf:
+    key: "/org/gnome/desktop/interface/icon-theme"
+    value: "'Pop'"

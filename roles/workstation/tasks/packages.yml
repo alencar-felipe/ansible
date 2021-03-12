@@ -43,6 +43,7 @@
      - debtap
      - vscodium-bin
      - pop-gtk-theme
+     - pop-icon-theme
      
     user: ansible
     
