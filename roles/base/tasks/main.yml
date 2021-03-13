@@ -12,3 +12,6 @@
   
 - name: include roles/base/tasks/services.yml
   include: services.yml
+  
+- name: include roles/base/tasks/bash.yml
+  include: bash.yml

@@ -1,0 +1,7 @@
+- name: copy bashrc
+  copy: 
+    src: ../files/bashrc
+    dest: /home/felipe/.bashrc
+    owner: root
+    group: root
+    mode: 0440
