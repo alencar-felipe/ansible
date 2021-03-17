@@ -2,6 +2,6 @@
   copy: 
     src: ../files/bashrc
     dest: /home/felipe/.bashrc
-    owner: root
-    group: root
-    mode: 0440
+    owner: felipe
+    group: felipe
+    mode: 0444
