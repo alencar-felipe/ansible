@@ -21,3 +21,11 @@
   dconf:
     key: "/org/gnome/shell/favorite-apps"
     value: "['chromium.desktop', 'org.gnome.Nautilus.desktop', 'Alacritty.desktop', 'VSCodium.desktop']"
+
+- name: Set default apps
+  copy: 
+    src: ../files/mimeapps.list
+    dest: /home/felipe/.config/mimeapps.list
+    owner: felipe
+    group: felipe
+    mode: 0444
