@@ -15,16 +15,10 @@
 - name: add user felipe
   user:
     name: felipe
+    groups: 'docker, uucp'
     state: present
     update_password: on_create
     password: $6$/E9TdqBxeQI2k$pMCyMyA0QG8f4DVj/HNz7N/AhxzUra37AFxTJrWmdrMKRVxsq9kbx4oBzhgb2atN715CrrUBWI6/KgBg4s.Qs.
-
-- name: expire user felipe default password
-  shell: |
-    if grep -q felipe:$6$/E9TdqBxeQI2k$pMCyMyA0QG8f4DVj/HNz7N/AhxzUra37AFxTJrWmdrMKRVxsq9kbx4oBzhgb2atN715CrrUBWI6/KgBg4s.Qs.:0:0:99999:7::: /etc/shadow
-    then
-      passwd --expire felipe
-    fi
     
 - name: set up sudo for user felipe
   copy: 

@@ -3,3 +3,10 @@
     name: cronie
     enabled: yes
     state: started
+    
+- name: Enable Docker service
+  service:
+    name: docker
+    enabled: yes
+    state: started
+    
