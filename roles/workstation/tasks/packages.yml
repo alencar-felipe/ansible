@@ -34,6 +34,7 @@
       - simple-scan
       - powerline
       - python-psutil
+      - virtualbox
       
 - name: install workstation aur packages
   aur:
