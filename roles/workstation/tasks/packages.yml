@@ -29,6 +29,7 @@
       - eog
       - torbrowser-launcher
       - arduino
+      - arduino-avr-core
       - obs-studio
       - gnome-calculator
       - simple-scan
