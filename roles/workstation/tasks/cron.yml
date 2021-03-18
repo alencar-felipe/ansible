@@ -4,3 +4,10 @@
     user: felipe
     special_time: reboot
     job: bash -c "ln -sf \"\$(shuf -n1 -e /usr/share/wallpapers/*)\" $HOME/.wallpaper"
+    
+- name: disable sshd on boot 
+  service:
+    name: sshd disable
+    user: ansible
+    special_time: reboot
+    job: sudo systemctl disable sshd && sudo systemctl stop sshd
