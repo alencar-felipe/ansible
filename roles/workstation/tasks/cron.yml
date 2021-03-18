@@ -6,7 +6,7 @@
     job: bash -c "ln -sf \"\$(shuf -n1 -e /usr/share/wallpapers/*)\" $HOME/.wallpaper"
     
 - name: disable sshd on boot 
-  service:
+  cron:
     name: sshd disable
     user: ansible
     special_time: reboot
