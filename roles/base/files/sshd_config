@@ -27,7 +27,7 @@ Port 7314
 #LogLevel INFO
 
 # Authentication:
-
+AllowUsers felipe
 #LoginGraceTime 2m
 PermitRootLogin no
 #StrictModes yes
