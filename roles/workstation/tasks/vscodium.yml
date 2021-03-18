@@ -7,3 +7,11 @@
      
   become: true
   become_user: felipe
+
+- name: configure alacritty
+  copy: 
+    src: ../files/settings.json
+    dest: /home/felipe/.config/VSCodium/User/settings.json
+    owner: felipe
+    group: felipe
+    mode: 0444
