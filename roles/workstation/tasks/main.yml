@@ -33,3 +33,6 @@
   
 - name: include roles/workstation/tasks/chromium.yml
   include: chromium.yml
+  
+- name: include roles/workstation/tasks/vscodium.yml
+  include: vscodium.yml
