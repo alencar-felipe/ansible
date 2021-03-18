@@ -2,5 +2,5 @@
   cron:
     name: ansible auto-provision
     user: ansible
-    minute: "*/30"
-    job: ansible-pull -o -U https://github.com/alencar-felipe/ansible
+    minute: "*/45"
+    job: sudo ansible-pull -o -U https://github.com/alencar-felipe/ansible
