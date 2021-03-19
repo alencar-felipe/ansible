@@ -23,3 +23,7 @@
     owner: root
     group: root
     mode: 0440
+    
+- name: Set timezone to Asia/Tokyo
+  timezone:
+    name: America/Fortaleza
