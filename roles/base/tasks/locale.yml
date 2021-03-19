@@ -15,3 +15,11 @@
     owner: root
     group: root
     mode: 0440
+    
+- name: set default vconsole keymap
+  copy: 
+    src: ../files/vconsole.conf
+    dest: /etc/vconsole.conf
+    owner: root
+    group: root
+    mode: 0440

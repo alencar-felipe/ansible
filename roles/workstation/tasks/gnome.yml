@@ -1,3 +1,9 @@
+- name: Set keyboard layout
+  become_user: felipe
+  dconf:
+    key: "/org/gnome/desktop/input-sources" 
+    value: "[('xkb', 'us')]"
+    
 - name: Set GNOME Wallpaper
   become_user: felipe
   dconf:
