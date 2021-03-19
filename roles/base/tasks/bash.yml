@@ -1,7 +1,7 @@
 - name: copy bashrc
   copy: 
     src: ../files/bashrc
-    dest: /home/felipe/.bashrc
-    owner: felipe
-    group: felipe
+    dest: /etc/bash.bashrc
+    owner: root
+    group: root
     mode: 0444
