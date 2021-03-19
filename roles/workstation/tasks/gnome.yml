@@ -2,7 +2,7 @@
   become_user: felipe
   dconf:
     key: "/org/gnome/desktop/input-sources" 
-    value: "[('xkb', 'us')]"
+    value: "[('xkb', 'br')]"
     
 - name: Set GNOME Wallpaper
   become_user: felipe
