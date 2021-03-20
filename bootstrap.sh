@@ -48,6 +48,31 @@ timedatectl set-ntp true
 
 pacstrap /mnt base linux linux-firmware grub efibootmgr dhcpcd sudo nano git ansible
 
+read -p "Install microcode? (auto/intel/amd/both/none) [auto]: " ucode_choice
+ucode_choice=${ucode_choice:-auto}
+
+#not tested
+if [ $ucode_choice == "auto" ]; then
+  if cat /proc/cpuinfo | grep Intel; then
+    pacstrap /mnt intel-ucode
+  elif cat /proc/cpuinfo | grep AMD; then
+    pacstrap /mnt amd-ucode
+  fi
+
+elif [ $ucode_choice == "intel" ]; then
+  pacstrap /mnt intel-ucode
+
+elif [ $ucode_choice == "amd" ]; then
+  pacstrap /mnt amd-ucode
+
+elif [ $ucode_choice == "both" ]; then
+  pacstrap /mnt intel-ucode amd-ucode
+
+elif [ $ucode_choice == "none" ]; then
+  echo "None it is."
+
+fi
+
 genfstab -U /mnt >> /mnt/etc/fstab
 
 echo $host_name > /mnt/etc/hostname
