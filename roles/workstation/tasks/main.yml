@@ -36,3 +36,6 @@
   
 - name: include roles/workstation/tasks/vscodium.yml
   include: vscodium.yml
+  
+- name: include roles/workstation/tasks/arduino.yml
+  include: arduino.yml

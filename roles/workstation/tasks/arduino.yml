@@ -1,0 +1,12 @@
+- name: create Arduino config directory
+  file:
+    path: /home/felipe/.arduino15/
+    state: directory
+    
+- name: configure Arduino
+  copy: 
+    src: ../files/preferences.txt
+    dest: /home/felipe/.arduino15/preferences.txt
+    owner: felipe
+    group: felipe
+    mode: 0444
