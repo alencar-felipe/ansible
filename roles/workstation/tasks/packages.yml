@@ -47,4 +47,13 @@
      - pop-icon-theme
      
     user: ansible
+
+#quick fix for arduino package installation
+- name: arduino installation (quick fix)
+  shell: |
+    sudo pacman -Sy --noconfirm arduino
+     
+  become: true
+  become_user: felipe
+  
     
