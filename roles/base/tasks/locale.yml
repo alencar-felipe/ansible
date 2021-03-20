@@ -24,6 +24,6 @@
     group: root
     mode: 0440
     
-- name: Set timezone to Asia/Tokyo
+- name: Set timezone
   timezone:
     name: America/Fortaleza
