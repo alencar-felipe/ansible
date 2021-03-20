@@ -1,6 +1,0 @@
-#- name: change felipe shell to fish 
-#  become: yes
-#  user:
-#    name: "felipe"
-#    shell: /bin/fish
-        
