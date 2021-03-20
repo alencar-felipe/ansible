@@ -1,9 +1,9 @@
 - name: wallpaper cron job
   cron:
     name: wallpaper
-    user: felipe
+    user: ansible
     special_time: reboot
-    job: bash -c "ln -sf \"\$(shuf -n1 -e /usr/share/wallpapers/*)\" $HOME/.wallpaper"
+    job: ln -sf "$(shuf -n1 -e /usr/share/wallpapers/*)" /usr/share/wallpapers/.wallpaper
     
 - name: disable sshd on boot 
   cron:

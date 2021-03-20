@@ -8,7 +8,7 @@
   become_user: felipe
   dconf:
     key: "/org/gnome/desktop/background/picture-uri" 
-    value: "'file:///home/felipe/.wallpaper'"
+    value: "'file:///usr/share/wallpapers/.wallpaper'"
     
 - name: Set GTK theme
   become_user: felipe
