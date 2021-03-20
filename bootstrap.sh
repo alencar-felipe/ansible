@@ -34,6 +34,9 @@ fi
 read -p "Host name [myarch]: " host_name
 host_name=${host_name:-myarch}
 
+read -p "Install microcode? (auto/intel/amd/both/none) [auto]: " ucode_choice
+ucode_choice=${ucode_choice:-auto}
+
 mkfs.fat -F32 $efi_partition 
 mkfs.ext4 $root_partition
 
@@ -47,9 +50,6 @@ mount $root_partition /mnt
 timedatectl set-ntp true
 
 pacstrap /mnt base linux linux-firmware grub efibootmgr dhcpcd sudo nano git ansible
-
-read -p "Install microcode? (auto/intel/amd/both/none) [auto]: " ucode_choice
-ucode_choice=${ucode_choice:-auto}
 
 #not tested
 if [ $ucode_choice == "auto" ]; then
