@@ -42,3 +42,14 @@
     key: "/org/gnome/desktop/notifications/show-in-lock-screen"
     value: "false"
     
+- name: Disable auto lock
+  become_user: felipe
+  dconf:
+    key: "/org/gnome/desktop/screensaver/lock-enabled"
+    value: "false"
+ 
+- name: Set lock delay after blank screen
+  become_user: felipe
+  dconf:
+    key: "/org/gnome/desktop/screensaver/lock-delay"
+    value: "uint32 0"
