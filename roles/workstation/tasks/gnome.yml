@@ -35,3 +35,10 @@
     owner: felipe
     group: felipe
     mode: 0444
+    
+- name: Disable lock screen notifications
+  become_user: felipe
+  dconf:
+    key: "/org/gnome/desktop/notifications/show-in-lock-screen"
+    value: "false"
+    
