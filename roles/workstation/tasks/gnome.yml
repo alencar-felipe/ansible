@@ -53,3 +53,9 @@
   dconf:
     key: "/org/gnome/desktop/screensaver/lock-delay"
     value: "uint32 0"
+    
+- name: Set delay to blank screen
+  become_user: felipe
+  dconf:
+    key: "/org/gnome/desktop/session/idle-delay"
+    value: "uint32 900" # 15 min  
