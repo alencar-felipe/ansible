@@ -2,7 +2,13 @@
   service:
     name: gdm
     enabled: yes
-    
+
+- name: Disable dhcpcd service
+  service:
+    name: dhcpcd
+    enabled: no
+    state: stopped
+
 - name: Enable NetworkManager service
   service:
     name: NetworkManager
