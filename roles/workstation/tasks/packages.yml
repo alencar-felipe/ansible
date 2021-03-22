@@ -35,6 +35,8 @@
       - powerline
       - python-psutil
       - virtualbox
+      - openscad
+      - cura
       
 - name: install workstation aur packages
   aur:
