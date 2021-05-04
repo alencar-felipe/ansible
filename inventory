@@ -5,3 +5,7 @@ all:
     workstation:
       hosts:
         reliant
+
+    server:
+      hosts:
+        home-server

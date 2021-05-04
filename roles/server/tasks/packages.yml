@@ -1,0 +1,6 @@
+- name: install server packages
+  package: 
+    name:
+      - docker-compose
+  
+    
