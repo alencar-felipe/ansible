@@ -40,7 +40,7 @@ services:
     image: rclone/rclone
     volumes:
       - /volumes/rclone:/config/rclone
-      - /shared:/data:shared
+      - /shared:/data
 
     command: mount remote /data
     networks:
