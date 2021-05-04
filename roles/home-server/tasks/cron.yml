@@ -3,4 +3,4 @@
     name: docker-compose
     user: ansible
     special_time: reboot
-    job: docker-compose up -d -f /docker-compose/docker-compose.yml
+    job: docker-compose -f /docker-compose/docker-compose.yml up -d
