@@ -8,6 +8,7 @@
       - gnome-shell-extensions 
       - chrome-gnome-shell 
       - gnome-system-monitor 
+      - gnome-screenshot
       - networkmanager
       - gvfs-smb 
       - cups
