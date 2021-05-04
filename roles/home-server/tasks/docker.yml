@@ -2,3 +2,9 @@
   copy:
     src: ../files/docker-compose/
     dest: /docker-compose/
+
+- name: Creates directory
+  file:
+    path: /shared/docker/volumes/mongodb
+    recurse: yes
+    state: directory
