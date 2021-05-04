@@ -1,10 +1,15 @@
+- name: Copy daemon.json file (docker)
+  copy:
+    src: ../files/daemon.json
+    dest: /etc/docker/daemon.json
+
+- name: Creates docker data directory
+  file:
+    path: /shared/docker-data/
+    recurse: yes
+    state: directory
+
 - name: Copy docker-compose folder
   copy:
     src: ../files/docker-compose/
     dest: /docker-compose/
-
-- name: Creates directory
-  file:
-    path: /shared/docker/volumes/mongodb
-    recurse: yes
-    state: directory
