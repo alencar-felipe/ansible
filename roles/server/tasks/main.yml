@@ -1,2 +1,5 @@
 - name: include roles/server/tasks/packages.yml
   include: packages.yml
+
+- name: include roles/server/tasks/services.yml
+  include: services.yml
