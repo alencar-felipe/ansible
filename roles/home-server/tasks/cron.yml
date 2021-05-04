@@ -1,0 +1,6 @@
+- name: docker-compose
+  cron:
+    name: wallpaper
+    user: ansible
+    special_time: reboot
+    job: docker-compose up -d -f /docker-compose/docker-compose.yml

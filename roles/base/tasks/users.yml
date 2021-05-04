@@ -1,6 +1,7 @@
 - name: add ansible user
   user:
     name: ansible
+    groups: 'docker'
     state: present
     system: yes
 

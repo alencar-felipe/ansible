@@ -13,3 +13,8 @@
   become: true
   roles:
     - server
+
+- hosts: home-server
+  become: true
+  roles:
+    - home-server

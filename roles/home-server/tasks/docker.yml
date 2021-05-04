@@ -1,0 +1,4 @@
+- name: Copy docker-compose folder
+  copy:
+    src: ../files/docker-compose/
+    dest: /docker-compose/

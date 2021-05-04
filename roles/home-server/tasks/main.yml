@@ -1,0 +1,5 @@
+- name: include roles/server/tasks/cron.yml
+  include: cron.yml
+
+- name: include roles/server/tasks/docker.yml
+  include: docker.yml
