@@ -27,3 +27,4 @@
       - base-devel
       - gcc
       - make
+      - iftop
