@@ -35,5 +35,20 @@ services:
 
     restart: unless-stopped
 
+  rclone:
+    container_name: rclone
+    image: rclone/rclone
+    volumes:
+      - /volumes/rclone:/config/rclone
+      - /shared:/data:shared
+
+    command: mount remote /data
+    networks:
+      default:
+        aliases:
+          - rclone
+
+    restart: unless-stopped
+  
 networks:
   default:
