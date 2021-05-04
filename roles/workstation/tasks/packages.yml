@@ -12,6 +12,7 @@
       - networkmanager
       - gvfs-smb 
       - cups
+      - hplip
       - xterm
       - alacritty
       - nautilus
