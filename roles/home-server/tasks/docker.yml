@@ -5,7 +5,7 @@
 
 - name: Creates docker data directory
   file:
-    path: /shared/docker-data/
+    path: /mnt/shared/docker-data/
     recurse: yes
     state: directory
 

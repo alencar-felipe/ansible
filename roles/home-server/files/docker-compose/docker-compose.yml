@@ -42,7 +42,6 @@ services:
       - ./volumes/rclone:/config/rclone
       - /mnt/shared:/data
 
-    command: 
     networks:
       default:
         aliases:
