@@ -1,7 +1,9 @@
 FROM rclone/rclone
 
-ADD script.sh script.sh
+RUN mkdir /app
 
-RUN chmod +x script.sh
+ADD script.sh /app/script.sh
 
-ENTRYPOINT ./script.sh
+RUN chmod +x /app/script.sh
+
+ENTRYPOINT /app/script.sh
