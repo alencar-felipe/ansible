@@ -37,12 +37,12 @@ services:
 
   rclone:
     container_name: rclone
-    image: rclone/rclone
+    build: ./images/rclone/
     volumes:
-      - /volumes/rclone:/config/rclone
-      - /shared:/data
+      - ./volumes/rclone:/config/rclone
+      - /mnt/shared:/data
 
-    command: rclone mount remote /data
+    command: 
     networks:
       default:
         aliases:
