@@ -39,6 +39,13 @@
       - virtualbox
       - openscad
       - cura
+      - jre-openjdk
+      - jdk-openjdk
+      - openjdk-doc
+      - openjdk-src
+      - java-openjfx
+      - java-openjfx-doc
+      - java-openjfx-src
       
 - name: install workstation aur packages
   aur:
