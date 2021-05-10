@@ -13,7 +13,7 @@
 
 - name: copy felipe_personal chromium preferences files
   copy: 
-    src: ../files/default.json
+    src: ../files/felipe_personal.json
     dest: /home/felipe/.config/chromium/felipe_personal.json
     owner: felipe
     group: felipe
@@ -21,7 +21,7 @@
 
 - name: copy felipe_ufc chromium preferences files
   copy: 
-    src: ../files/default.json
+    src: ../files/felipe_ufc.json
     dest: /home/felipe/.config/chromium/felipe_ufc.json
     owner: felipe
     group: felipe
