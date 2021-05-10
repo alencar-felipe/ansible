@@ -7,6 +7,7 @@
       - ttf-freefont
       - ttf-arphic-uming
       - ttf-baekmuk
+      - noto-fonts-emoji 
       
 - name: install workstation aur font packages
   aur:
