@@ -23,11 +23,11 @@
   shell: |
     cd $HOME/.config/chromium
 
-    chromium --profile-directory="felipe_personal" --headless --disable-gpu --user-data-dir="$HOME/.config/chromium"
-    chromium --profile-directory="felipe_ufc" --headless -disable-gpu --user-data-dir="$HOME/.config/chromium"
+    timeout 10 chromium --profile-directory="felipe_personal"
+    timeout 10 chromium --profile-directory="felipe_ufc"
 
-    jq -s '.[0] * .[1]' felipe_personal/Preferences default.json
-    jq -s '.[0] * .[1]' felipe_ufc/Preferences default.json
+    jq -s '.[0] * .[1]' felipe_personal/Preferences default.json | sponge felipe_personal/Preferences
+    jq -s '.[0] * .[1]' felipe_ufc/Preferences default.json | sponge felipe_ufc/Preferences
 
   become: true
   become_user: felipe
