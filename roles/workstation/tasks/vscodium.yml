@@ -4,7 +4,11 @@
     codium --install-extension eamodio.gitlens
     codium --install-extension donjayamanne.githistory
     codium --install-extension wayou.vscode-todo-highlight
-     
+    codium --install-extension redhat.java
+    codium --install-extension vscjava.vscode-java-debug
+    codium --install-extension vscjava.vscode-java-test
+    codium --install-extension vscjava.vscode-java-dependency
+    
   become: true
   become_user: felipe
 
