@@ -4,6 +4,9 @@
       - ttf-liberation
       - ttf-roboto
       - ttf-fira-code
+      - ttf-freefont
+      - ttf-arphic-uming
+      - ttf-baekmuk
       
 - name: install workstation aur font packages
   aur:
