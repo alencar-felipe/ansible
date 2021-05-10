@@ -10,3 +10,25 @@
     owner: root
     group: root
     mode: 0444
+
+- name: copy default chromium preferences files
+  copy: 
+    src: ../files/default.json
+    dest: /home/felipe/.config/chromium/default.json
+    owner: felipe
+    group: felipe
+    mode: 0444
+
+- name: create chromium profiles
+  shell: |
+    cd $HOME/.config/chromium
+
+    chromium --profile-directory="felipe_personal" --headless --disable-gpu --user-data-dir="$HOME/.config/chromium"
+    chromium --profile-directory="felipe_ufc" --headless -disable-gpu --user-data-dir="$HOME/.config/chromium"
+
+    jq -s '.[0] * .[1]' felipe_personal/Preferences default.json
+    jq -s '.[0] * .[1]' felipe_ufc/Preferences default.json
+
+  become: true
+  become_user: felipe
+
