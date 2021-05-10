@@ -1,5 +1,7 @@
 {
-  "name": "Felipe (UFC)",
+  "profile": {
+    "name": "Felipe (UFC)"
+  },
   "webkit": {
     "webprefs": {
       "fonts": {

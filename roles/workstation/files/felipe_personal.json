@@ -1,5 +1,7 @@
 {
-  "name": "Felipe (Personal)",
+  "profile": {
+    "name": "Felipe (Personal)"
+  },
   "webkit": {
     "webprefs": {
       "fonts": {
