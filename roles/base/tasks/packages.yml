@@ -28,3 +28,4 @@
       - gcc
       - make
       - iftop
+      - jq
