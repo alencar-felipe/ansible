@@ -1,7 +1,7 @@
 all:
   hosts:
-    - localhost
-    
+    localhost
+
   children:
     workstation:
       hosts:
@@ -10,4 +10,4 @@ all:
 
     server:
       hosts:
-        - home-server
+        home-server
