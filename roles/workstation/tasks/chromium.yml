@@ -10,36 +10,3 @@
     owner: root
     group: root
     mode: 0444
-
-- name: copy felipe_personal chromium preferences files
-  copy: 
-    src: ../files/felipe_personal.json
-    dest: /home/felipe/.config/chromium/felipe_personal.json
-    owner: felipe
-    group: felipe
-    mode: 0444
-
-- name: copy felipe_ufc chromium preferences files
-  copy: 
-    src: ../files/felipe_ufc.json
-    dest: /home/felipe/.config/chromium/felipe_ufc.json
-    owner: felipe
-    group: felipe
-    mode: 0444
-
-- name: create chromium profiles
-  shell: |
-    cd $HOME/.config/chromium
-
-    timeout 10 chromium --profile-directory="felipe_personal"
-    timeout 10 chromium --profile-directory="felipe_ufc"
-
-    jq -s '.[0] * .[1]' felipe_personal/Preferences \
-    felipe_personal.json | sponge felipe_personal/Preferences
-    
-    jq -s '.[0] * .[1]' felipe_ufc/Preferences \
-    felipe_ufc.json | sponge felipe_ufc/Preferences
-
-  become: true
-  become_user: felipe
-
