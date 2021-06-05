@@ -1,0 +1,7 @@
+{
+    "editor.fontFamily": "'FuraCode Nerd Font'",
+    "terminal.integrated.fontFamily": "'FuraCode Nerd Font'",
+    "editor.fontWeight": 400,
+    "editor.fontSize": 15,
+    "editor.fontLigatures": true
+}
