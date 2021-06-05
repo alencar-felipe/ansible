@@ -1,12 +1,13 @@
 all:
   hosts:
-    localhost
+    - localhost
+    
   children:
     workstation:
       hosts:
-        reliant
-        discovery
+        - reliant
+        - discovery
 
     server:
       hosts:
-        home-server
+        - home-server
