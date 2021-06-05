@@ -5,6 +5,7 @@ all:
     workstation:
       hosts:
         reliant
+        discovery
 
     server:
       hosts:
