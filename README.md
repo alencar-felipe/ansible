@@ -14,4 +14,4 @@ parted /dev/sda -- mkpart ESP fat32 1MiB 512MiB
 parted /dev/sda -- set 3 esp on
 ```
 
-bash -c "$(curl -s raw.githubusercontent.com/alencar-felipe/ansible/main/bootstrap.sh)"
+bash -c "$(curl -sL raw.githubusercontent.com/alencar-felipe/ansible/main/bootstrap.sh)"
