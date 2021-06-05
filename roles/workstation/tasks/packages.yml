@@ -6,7 +6,6 @@
       - gnome-control-center
       - gnome-tweaks
       - gnome-shell-extensions 
-      - chrome-gnome-shell 
       - gnome-system-monitor 
       - gnome-screenshot
       - networkmanager
@@ -56,6 +55,7 @@
      - vscodium-bin
      - pop-gtk-theme
      - pop-icon-theme
+     - chrome-gnome-shell-git
      
     user: ansible
 
