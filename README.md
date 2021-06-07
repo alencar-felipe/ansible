@@ -1,17 +1,19 @@
 # ansible
 
-Under HEAVY development!!! Will not work.
+## Installation guide
 
-## Instructions
+### 1. Live enviroment
 
-### 1. Partitioning
+[Boot in the Arch Linux live environment.](https://wiki.archlinux.org/title/installation_guide#Pre-installation)
+
+### 2. Partitioning
+
+<https://wiki.archlinux.org/title/installation_guide#Partition_the_disks>
+
+### 3. Bootstrap
+
+Run the following command in the live enviroment.
 
 ```
-parted /dev/sda -- mklabel gpt
-parted /dev/sda -- mkpart primary 512MiB -8GiB
-parted /dev/sda -- mkpart primary linux-swap -8GiB 100%
-parted /dev/sda -- mkpart ESP fat32 1MiB 512MiB
-parted /dev/sda -- set 3 esp on
-```
-
 bash -c "$(curl -sL raw.githubusercontent.com/alencar-felipe/ansible/main/bootstrap.sh)"
+```
