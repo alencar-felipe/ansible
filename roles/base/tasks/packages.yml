@@ -30,3 +30,4 @@
       - iftop
       - jq
       - moreutils
+      - linux-headers
