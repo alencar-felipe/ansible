@@ -38,6 +38,7 @@
       - virtualbox
       - openscad
       - cura
+      - blender
       - jre-openjdk
       - jdk-openjdk
       - openjdk-doc
@@ -45,10 +46,13 @@
       - java-openjfx
       - java-openjfx-doc
       - java-openjfx-src
-      
+      - keepassxc
+      - gvfs-mtp
+  
 - name: install workstation aur packages
   aur:
     name:
+     - yay
      - scrcpy
      - teamviewer-latest
      - debtap
@@ -56,7 +60,7 @@
      - pop-gtk-theme
      - pop-icon-theme
      - chrome-gnome-shell-git
-     
+          
     user: ansible
 
 #quick fix for arduino package installation
