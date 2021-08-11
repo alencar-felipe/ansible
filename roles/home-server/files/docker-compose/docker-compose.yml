@@ -58,6 +58,9 @@ services:
       DEFAULT_PLAYER_PERMISSION_LEVEL: visitor
       OPS: "2535429530304678"
 
+    volumes:
+      - /mnt/shared/minecraft:/data
+
     networks:
       default:
         aliases:
