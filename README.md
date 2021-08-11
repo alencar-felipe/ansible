@@ -1,5 +1,6 @@
 # ansible
 
+This repository contains Ansible playbooks to set up my personal machines.
 ## Installation guide
 
 ### 1. Live enviroment
