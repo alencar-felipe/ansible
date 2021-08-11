@@ -68,22 +68,22 @@ services:
 
     restart: unless-stopped
 
-    ddclient:
-      container_name: ddclient
-      image: linuxserver/ddclient
+  ddclient:
+    container_name: ddclient
+    image: linuxserver/ddclient
       
-      environment:
-        - TZ=America/Fortaleza
+    environment:
+      - TZ=America/Fortaleza
     
-      volumes:
-        - ./volumes/ddclient:/config
+    volumes:
+      - ./volumes/ddclient:/config
 
-      networks:
-        default:
-          aliases:
-            - ddclient
+    networks:
+      default:
+        aliases:
+          - ddclient
 
-      restart: unless-stopped
+    restart: unless-stopped
 
 networks:
   default:
