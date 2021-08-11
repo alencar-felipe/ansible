@@ -6,7 +6,7 @@ services:
     image: mongo:4.0
     ports:
       - 27017:27017
-    
+
     volumes:
       - /mnt/shared/mongodb:/data/db
 
@@ -16,7 +16,7 @@ services:
           - mongo
 
     restart: unless-stopped
-    
+
   mongo-express:
     container_name: mongo-express
     image: mongo-express
@@ -45,16 +45,16 @@ services:
 #    restart: unless-stopped
 
   minecraft:
-    contaioner_name: minecraft
-    image: itzg/minecraft-bedrock-server  
+    container_name: minecraft
+    image: itzg/minecraft-bedrock-server
     ports:
-      19132:19132/udp
-      
+      - 19132:19132/udp
+
     environment:
       EULA: "TRUE"
       GAMEMODE: survival
       DIFFICULTY: normal
-      ALLOW_CHEATS: "TRUE"
+      ALLOW_CHEATS: "true"
       DEFAULT_PLAYER_PERMISSION_LEVEL: visitor
       OPS: "2535429530304678"
 
@@ -66,7 +66,7 @@ services:
         aliases:
           - minecraft
 
-    restart: unless-stoped
+    restart: unless-stopped
 
 networks:
   default:
