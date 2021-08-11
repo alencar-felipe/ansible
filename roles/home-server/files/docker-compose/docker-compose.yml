@@ -30,19 +30,40 @@ services:
 
     restart: unless-stopped
 
-  rclone:
-    container_name: rclone
-    build: ./images/rclone/
-    volumes:
-      - ./volumes/rclone:/config/rclone
-      - /mnt/shared:/data
+#  rclone:
+#    container_name: rclone
+#    build: ./images/rclone/
+#    volumes:
+#      - ./volumes/rclone:/config/rclone
+#      - /mnt/shared:/data
+#
+#    networks:
+#      default:
+#        aliases:
+#          - rclone
+#
+#    restart: unless-stopped
+
+  minecraft:
+    contaioner_name: minecraft
+    image: itzg/minecraft-bedrock-server  
+    ports:
+      19132:19132/udp
+      
+    environment:
+      EULA: "TRUE"
+      GAMEMODE: survival
+      DIFFICULTY: normal
+      ALLOW_CHEATS: "TRUE"
+      DEFAULT_PLAYER_PERMISSION_LEVEL: visitor
+      OPS: "2535429530304678"
 
     networks:
       default:
         aliases:
-          - rclone
+          - minecraft
 
-    restart: unless-stopped
-  
+    restart: unless-stoped
+
 networks:
   default:
