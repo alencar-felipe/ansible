@@ -96,5 +96,22 @@ services:
 #      - ST_TELEGRAM_CHAT_IDS=640435377
 #      - ST_TELEGRAM_BOT_TOKEN=1948322445:AAF9XTHOX7I23AfZ2OnUxnpSxpYV-IQ7q5Q
 
+  samba:
+    container_name: samba
+    image: elswork/samba
+    ports:
+      - 445:445
+    
+    volumes:
+      - /mnt/shared:/share/data 
+
+    command: >
+      -u "1000:1000:felipe:felipe:password" \ # At least the first user must match (password can be different) with a real user from your host filesystem
+      -u "1002:1002:guest:guest:guest" \
+      -s "shared:/share/data:rw:felipe,guest"
+
+    environment:
+      - TZ=America/Fortaleza
+
 networks:
   default:
