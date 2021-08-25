@@ -98,18 +98,19 @@ services:
 
   samba:
     container_name: samba
-    image: elswork/samba
+    image: dperson/samba
     ports:
+      - 139:139
       - 445:445
     
     volumes:
       - /mnt/shared:/share/data 
 
     command: >
-      -u "1000:1000:felipe:felipe:password" \ # At least the first user must match (password can be different) with a real user from your host filesystem
+      -u "felipe:badpass" \
       -u "1002:1002:guest:guest:guest" \
-      -s "shared:/share/data:rw:felipe,guest"
-
+      -s "users;/share/data;no;no;no;felipe"
+      
     environment:
       - TZ=America/Fortaleza
 
