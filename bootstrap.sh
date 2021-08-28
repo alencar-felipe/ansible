@@ -115,7 +115,7 @@ while [ "\$i" -le "10" ]; do
   fi
   
   echo "Waiting for github.com - network interface might be down..."
-  sleep 2
+  sleep 4
    
   i=\$(( i + 1 ))
 done
