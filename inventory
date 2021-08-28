@@ -5,7 +5,7 @@ all:
   children:
     workstation:
       hosts:
-        reliant:
+        phoenix:
         discovery:
 
     server:
