@@ -2,6 +2,30 @@
 
 set -e
 
+#!/bin/bash
+
+helpFunction()
+{
+   echo ""
+   echo "Usage: $0 -b <\"grub\" or \"systemd-boot\">"
+   echo -e "\t-b bootloader (deafault is systemd-boot)"
+   exit 1 # Exit script after printing help
+}
+
+bootloader="systemd"
+
+while getopts "b:" opt
+do
+   case "$opt" in
+      b ) bootloader="$OPTARG" ;;
+      ? ) helpFunction ;; # Print helpFunction in case parameter is non-existent
+   esac
+done
+
+if [ $bootloader != "systemd" ] && [ $bootloader != "grub" ]; then
+  helpFunction
+fi
+
 if [ ! -d /sys/firmware/efi/efivars ]; then
   printf "Error: This system is not booted in UEFI mode."
   exit 1
@@ -46,12 +70,15 @@ if [ $swap_partition != "none" ]; then
 fi 
 
 mount $root_partition /mnt
+mkdir /mnt/boot
+mount $efi_partition /mnt/boot
 
 timedatectl set-ntp true
 
 pacstrap /mnt base linux linux-firmware grub efibootmgr dhcpcd sudo nano git ansible
 
-#not tested
+# INSTALLATION OF UCODE
+
 if [ $ucode_choice == "auto" ]; then
   if cat /proc/cpuinfo | grep Intel; then
     pacstrap /mnt intel-ucode
@@ -75,6 +102,8 @@ fi
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
+# HOSTNAME CONFIG
+
 echo $host_name > /mnt/etc/hostname
 
 cat <<EOT>> /mnt/etc/hosts
@@ -83,16 +112,41 @@ cat <<EOT>> /mnt/etc/hosts
 127.0.1.1	$host_name.localdomain	$host_name
 EOT
 
+# DHCP CONFIG
+
 cat << EOF | arch-chroot /mnt
-
-mkdir /boot/efi
-mount $efi_partition /boot/efi
-grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
-grub-mkconfig -o /boot/grub/grub.cfg
-
 systemctl enable dhcpcd.service
-
 EOF
+
+# BOOTLOADER INSTALLLATION
+
+if [ $bootloader == "systemd-boot" ]; then
+
+cat << EOF | arch-chroot /mnt
+bootctl install
+EOF
+
+PARTUUID=$(blkid -o export $root_partition | grep PARTUUID)
+
+cat <<EOT>> /mnt/boot/loader/entries/arch.conf
+title Arch Linux
+linux /vmlinuz-linux
+initrd /initramfs-linux.img
+options root=$PARTUUID
+EOT
+
+cat <<EOT>> /mnt/boot/loader/loader.conf
+default arch
+EOT
+
+elif [ $bootloader == "grub" ]; then
+
+cat << EOF | arch-chroot /mnt
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+grub-mkconfig -o /boot/grub/grub.cfg
+EOF
+
+fi
 
 mkdir -p /mnt/etc/systemd/system/getty@tty1.service.d/
 cat <<EOT>> /mnt/etc/systemd/system/getty@tty1.service.d/override.conf
