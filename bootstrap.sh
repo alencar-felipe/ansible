@@ -12,7 +12,7 @@ helpFunction()
    exit 1 # Exit script after printing help
 }
 
-bootloader="systemd"
+bootloader="systemd-boot"
 
 while getopts "b:" opt
 do
@@ -22,7 +22,7 @@ do
    esac
 done
 
-if [ $bootloader != "systemd" ] && [ $bootloader != "grub" ]; then
+if [ $bootloader != "systemd-boot" ] && [ $bootloader != "grub" ]; then
   helpFunction
 fi
 
@@ -70,7 +70,7 @@ if [ $swap_partition != "none" ]; then
 fi 
 
 mount $root_partition /mnt
-mkdir /mnt/boot
+mkdir -p /mnt/boot
 mount $efi_partition /mnt/boot
 
 timedatectl set-ntp true
