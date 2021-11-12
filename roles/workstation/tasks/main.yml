@@ -1,4 +1,3 @@
-tasks: 
 - name: include roles/workstation/tasks/packages.yml
   import_tasks: packages.yml
 
