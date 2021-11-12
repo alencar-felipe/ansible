@@ -4,8 +4,3 @@
       - openscad
       - cura
       - blender
-
-dependencies:
-  - role: modeling
-  
-    
