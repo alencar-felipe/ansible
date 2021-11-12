@@ -17,6 +17,7 @@
       - eog
       - gvfs-smb
       - gvfs-mtp
+      - python-psutil
       - xterm
       - alacritty
       - chromium
