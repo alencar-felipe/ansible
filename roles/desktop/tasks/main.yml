@@ -1,23 +1,26 @@
 - name: include roles/desktop/tasks/packages.yml
   import_tasks: packages.yml
 
-- name: include roles/workstation/tasks/gdm.yml
+- name: include roles/desktop/tasks/gdm.yml
   import_tasks: gdm.yml
 
-- name: include roles/workstation/tasks/gnome.yml
+- name: include roles/desktop/tasks/gnome.yml
   import_tasks: gnome.yml
 
-- name: include roles/workstation/tasks/fonts.yml
+- name: include roles/desktop/tasks/fonts.yml
   import_tasks: fonts.yml
 
-- name: include roles/workstation/tasks/wallpaper.yml
+- name: include roles/desktop/tasks/wallpaper.yml
   import_tasks: wallpaper.yml
 
-- name: include roles/workstation/tasks/nautilus.yml
+- name: include roles/desktop/tasks/nautilus.yml
   import_tasks: nautilus.yml
 
-- name: include roles/workstation/tasks/alacritty.yml
+- name: include roles/desktop/tasks/alacritty.yml
   import_tasks: alacritty.yml
 
-- name: include roles/workstation/tasks/chromium.yml
+- name: include roles/desktop/tasks/chromium.yml
   import_tasks: chromium.yml
+
+- name: include roles/desktop/tasks/cron.yml
+  import_tasks: cron.yml
