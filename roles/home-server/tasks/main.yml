@@ -3,3 +3,6 @@
 
 - name: include roles/server/tasks/docker.yml
   include: docker.yml
+
+dependencies:
+  - role: server

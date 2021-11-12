@@ -1,44 +1,19 @@
 - name: install workstation packages
   package: 
     name:
-      - gdm
-      - gnome-shell
-      - gnome-control-center
-      - gnome-tweaks
-      - gnome-shell-extensions 
-      - gnome-system-monitor 
-      - gnome-screenshot
-      - networkmanager
-      - gvfs-smb 
-      - cups
-      - hplip
-      - xterm
-      - alacritty
-      - nautilus
-      - evince
-      - chromium
-      - vlc
-      - libreoffice
       - inkscape
       - gimp
       - gparted
       - transmission-gtk
-      - gedit
       - kdenlive
       - audacity
-      - eog
       - torbrowser-launcher
       - arduino
       - arduino-avr-core
       - obs-studio
-      - gnome-calculator
-      - simple-scan
       - powerline
       - python-psutil
       - virtualbox
-      - openscad
-      - cura
-      - blender
       - jre-openjdk
       - jdk-openjdk
       - openjdk-doc
@@ -46,20 +21,15 @@
       - java-openjfx
       - java-openjfx-doc
       - java-openjfx-src
-      - keepassxc
-      - gvfs-mtp
+      - keepassxc      
   
 - name: install workstation aur packages
   aur:
     name:
-     - yay
      - scrcpy
      - teamviewer-latest
      - debtap
      - vscodium-bin
-     - pop-gtk-theme
-     - pop-icon-theme
-     - chrome-gnome-shell-git
           
     user: ansible
 

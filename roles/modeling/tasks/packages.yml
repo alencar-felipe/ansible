@@ -1,0 +1,11 @@
+- name: install modeling packages
+  package: 
+    name:
+      - openscad
+      - cura
+      - blender
+
+dependencies:
+  - role: modeling
+  
+    

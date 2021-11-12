@@ -3,33 +3,17 @@
 
 - name: include roles/workstation/tasks/cron.yml
   include: cron.yml
-
-- name: include roles/workstation/tasks/fonts.yml
-  include: fonts.yml
  
 - name: include roles/workstation/tasks/services.yml
   include: services.yml
-
-- name: include roles/workstation/tasks/wallpaper.yml
-  include: wallpaper.yml
-  
-- name: include roles/workstation/tasks/gdm.yml
-  include: gdm.yml
-  
-- name: include roles/workstation/tasks/gnome.yml
-  include: gnome.yml
-  
-- name: include roles/workstation/tasks/nautilus.yml
-  include: nautilus.yml
-
-- name: include roles/workstation/tasks/alacritty.yml
-  include: alacritty.yml
-  
-- name: include roles/workstation/tasks/chromium.yml
-  include: chromium.yml
   
 - name: include roles/workstation/tasks/vscodium.yml
   include: vscodium.yml
   
 - name: include roles/workstation/tasks/arduino.yml
   include: arduino.yml
+
+dependencies:
+  - role: desktop
+  - role: printing
+  - role: modeling

@@ -1,0 +1,5 @@
+- name: install printing packages
+  package: 
+    name:
+      - cups
+      - hplip

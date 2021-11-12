@@ -1,0 +1,6 @@
+- name: wallpaper cron job
+  cron:
+    name: wallpaper
+    user: ansible
+    special_time: reboot
+    job: sudo ln -sf "$(shuf -n1 -e /usr/share/wallpapers/*)" /usr/share/wallpapers/.wallpaper

@@ -1,9 +1,3 @@
----
-- hosts: all
-  become: true
-  roles:
-    - base
-    
 - hosts: workstation
   become: true
   roles:

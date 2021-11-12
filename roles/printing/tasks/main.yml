@@ -1,0 +1,5 @@
+- name: include roles/printing/tasks/packages.yml
+  include: packages.yml
+
+dependencies:
+  - role: base

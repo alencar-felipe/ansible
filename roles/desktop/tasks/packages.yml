@@ -1,0 +1,36 @@
+- name: install desktop packages
+  package: 
+    name:
+      - gdm
+      - gnome-shell
+      - gnome-control-center
+      - gnome-tweaks
+      - gnome-shell-extensions 
+      - gnome-system-monitor 
+      - gnome-screenshot
+      - gnome-calculator
+      - networkmanager
+      - nautilus
+      - simple-scan
+      - evince
+      - gedit
+      - eog
+      - gvfs-smb
+      - gvfs-mtp
+      - xterm
+      - alacritty
+      - chromium
+      - vlc
+      - libreoffice
+      - chromium
+
+- name: install desktop aur packages
+  aur:
+    name:
+      - yay
+      - pop-gtk-theme
+      - pop-icon-theme
+      - chrome-gnome-shell-git
+        
+    user: ansible
+    
