@@ -13,7 +13,7 @@
 - name: include roles/workstation/tasks/arduino.yml
   include: arduino.yml
 
-dependencies:
+- dependencies:
   - role: desktop
   - role: printing
   - role: modeling
