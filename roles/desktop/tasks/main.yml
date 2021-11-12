@@ -21,6 +21,3 @@
 
 - name: include roles/workstation/tasks/chromium.yml
   import_tasks: chromium.yml
-
-dependencies:
-  - role: base

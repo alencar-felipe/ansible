@@ -1,5 +1,2 @@
 - name: include roles/printing/tasks/packages.yml
-  include: packages.yml
-
-dependencies:
-  - role: base
+  import_tasks: packages.yml

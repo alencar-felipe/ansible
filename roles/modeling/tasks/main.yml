@@ -1,5 +1,2 @@
 - name: include roles/modeling/tasks/packages.yml
-  include: packages.yml
-
-dependencies:
-  - role: desktop
+  import_tasks: packages.yml
