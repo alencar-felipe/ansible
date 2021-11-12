@@ -1,6 +1,6 @@
 - name: refresh pacman keys
   shell: |
-    sudo pacman-key --refresh
+    sudo pacman-key --refresh || true
      
   become: true
   become_user: ansible
