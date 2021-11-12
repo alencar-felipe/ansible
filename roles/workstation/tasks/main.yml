@@ -12,8 +12,3 @@
   
 - name: include roles/workstation/tasks/arduino.yml
   import_tasks: arduino.yml
-
-- dependencies:
-  - role: desktop
-  - role: printing
-  - role: modeling

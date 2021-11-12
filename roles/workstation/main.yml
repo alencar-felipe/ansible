@@ -1,0 +1,4 @@
+- dependencies:
+  - role: desktop
+  - role: printing
+  - role: modeling
