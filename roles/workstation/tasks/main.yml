@@ -1,17 +1,17 @@
 - name: include roles/workstation/tasks/packages.yml
-  include: packages.yml
+  import_tasks: packages.yml
 
 - name: include roles/workstation/tasks/cron.yml
-  include: cron.yml
+  import_tasks: cron.yml
  
 - name: include roles/workstation/tasks/services.yml
-  include: services.yml
+  import_tasks: services.yml
   
 - name: include roles/workstation/tasks/vscodium.yml
-  include: vscodium.yml
+  import_tasks: vscodium.yml
   
 - name: include roles/workstation/tasks/arduino.yml
-  include: arduino.yml
+  import_tasks: arduino.yml
 
 - dependencies:
   - role: desktop

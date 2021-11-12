@@ -1,23 +1,23 @@
 - name: include roles/base/tasks/locale.yml
-  include: locale.yml
+  import_tasks: locale.yml
   
 - name: include roles/base/tasks/packages.yml
-  include: packages.yml
+  import_tasks: packages.yml
   
 - name: include roles/base/tasks/users.yml
-  include: users.yml
+  import_tasks: users.yml
   
 - name: include roles/base/tasks/cron.yml
-  include: cron.yml
+  import_tasks: cron.yml
   
 - name: include roles/base/tasks/services.yml
-  include: services.yml
+  import_tasks: services.yml
   
 - name: include roles/base/tasks/bash.yml
-  include: bash.yml
+  import_tasks: bash.yml
   
 - name: include roles/base/tasks/ssh.yml
-  include: ssh.yml
+  import_tasks: ssh.yml
 
 - name: include roles/base/tasks/git.yml
-  include: git.yml
+  import_tasks: git.yml
