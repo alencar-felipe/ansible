@@ -1,2 +1,5 @@
 - name: include roles/desktop/tasks/packages.yml
   import_tasks: packages.yml
+
+- name: include roles/desktop/tasks/desktop_files.yml
+  import_tasks: desktop_files.yml
