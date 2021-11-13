@@ -1,0 +1,34 @@
+- name: copy bitmap2component.desktop
+  copy: 
+    src: ../files/bitmap2component.desktop
+    dest: /usr/share/applications/bitmap2component.desktop
+    owner: root
+    group: root
+
+- name: copy eeschema.desktop
+  copy: 
+    src: ../files/eeschema.desktop
+    dest: /usr/share/applications/eeschema.desktop
+    owner: root
+    group: root
+
+- name: copy kicad.desktop
+  copy: 
+    src: ../files/kicad.desktop
+    dest: /usr/share/applications/kicad.desktop
+    owner: root
+    group: root
+
+- name: copy pcbcalculator.desktop
+  copy: 
+    src: ../files/pcbcalculator.desktop
+    dest: /usr/share/applications/pcbcalculator.desktop
+    owner: root
+    group: root
+
+- name: copy pcbnew.desktop
+  copy: 
+    src: ../files/pcbnew.desktop
+    dest: /usr/share/applications/pcbnew.desktop
+    owner: root
+    group: root
