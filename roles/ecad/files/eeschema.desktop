@@ -4,7 +4,7 @@ Terminal=false
 Icon=eeschema
 Type=Application
 Categories=Science;Electronics;
-Exec=GTK_THEME=Adwaita:light eeschema %f
+Exec=env GTK_THEME=Adwaita:light eeschema %f
 MimeType=application/x-kicad-schematic;
 Name=Eeschema (Standalone)
 GenericName=Electronic schematic capture

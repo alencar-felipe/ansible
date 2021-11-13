@@ -4,7 +4,7 @@ Terminal=false
 Icon=bitmap2component
 Type=Application
 Categories=Science;Electronics;
-Exec=GTK_THEME=Adwaita:light bitmap2component
+Exec=env GTK_THEME=Adwaita:light bitmap2component
 Name=Bitmap to Component Converter
 GenericName=Bitmap to Component Converter
 GenericName[it]=Convertitore da bitmap a componente

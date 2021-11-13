@@ -4,7 +4,7 @@ Terminal=false
 Icon=pcbcalculator
 Type=Application
 Categories=Science;Electronics;
-Exec=GTK_THEME=Adwaita:light pcb_calculator
+Exec=env GTK_THEME=Adwaita:light pcb_calculator
 Name=PCB Calculator
 GenericName=PCB Calculator
 GenericName[zh_CN]=PCB 计算器
