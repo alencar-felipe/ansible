@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Icon=gerbview
+Type=Application
+Categories=Science;Electronics;
+Exec=env GTK_THEME=Adwaita:light gerbview
+MimeType=application/x-gerber;application/x-excellon
+Name=GerbView
+GenericName=Gerber File Viewer
+GenericName[it]=Visualizzatore file Gerber
+GenericName[zh_CN]=Gerber 文件查看器
+Comment=View Gerber files
+Comment[it]=Visualizza file in formato Gerber
+Comment[zh_CN]=查看 Gerber 文件
