@@ -2,3 +2,4 @@ dependencies:
   - role: desktop
   - role: printing
   - role: modeling
+  - role: ecad

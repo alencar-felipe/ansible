@@ -1,0 +1,6 @@
+- name: install desktop packages
+  package: 
+    name:
+      - kicad
+
+    
