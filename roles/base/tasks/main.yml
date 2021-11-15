@@ -1,15 +1,15 @@
 - name: include roles/base/tasks/locale.yml
   import_tasks: locale.yml
-
+  
+- name: include roles/base/tasks/users.yml
+  import_tasks: users.yml
+  
 - name: include roles/base/tasks/pacman.yml
   import_tasks: pacman.yml
 
 - name: include roles/base/tasks/packages.yml
   import_tasks: packages.yml
-  
-- name: include roles/base/tasks/users.yml
-  import_tasks: users.yml
-  
+
 - name: include roles/base/tasks/cron.yml
   import_tasks: cron.yml
   
