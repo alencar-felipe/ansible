@@ -1,0 +1,12 @@
+- name: install virtualization packages
+  package:
+    name:
+      - virtualbox
+      - dkms
+
+- name: install virtualization aur packages
+  aur:
+    name:
+     - virtualbox-ext-oracle
+          
+    user: ansible

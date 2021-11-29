@@ -3,3 +3,4 @@ dependencies:
   - role: printing
   - role: modeling
   - role: ecad
+  - role: virtualization

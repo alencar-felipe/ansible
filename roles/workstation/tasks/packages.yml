@@ -12,7 +12,6 @@
       - arduino-avr-core
       - obs-studio
       - powerline
-      - virtualbox
       - jre-openjdk
       - jdk-openjdk
       - openjdk-doc
