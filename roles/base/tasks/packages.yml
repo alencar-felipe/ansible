@@ -31,3 +31,8 @@
       - jq
       - moreutils
       - linux-headers
+      - libfido2
+      - pv
+      - tree
+      - screen
+      - gnu-netcat 
