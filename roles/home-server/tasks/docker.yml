@@ -5,11 +5,6 @@
 
 - name: Creates docker data directory
   file:
-    path: /mnt/shared/docker-data/
+    path: /data/docker-data
     recurse: yes
     state: directory
-
-- name: Copy docker-compose folder
-  copy:
-    src: ../files/docker-compose/
-    dest: /docker-compose/

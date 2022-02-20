@@ -1,6 +1,0 @@
-- name: docker-compose cron job
-  cron:
-    name: docker-compose
-    user: ansible
-    special_time: reboot
-    job: docker-compose -f /docker-compose/docker-compose.yml up -d

@@ -1,5 +1,2 @@
-- name: include roles/server/tasks/cron.yml
-  import_tasks: cron.yml
-
 - name: include roles/server/tasks/docker.yml
   import_tasks: docker.yml
