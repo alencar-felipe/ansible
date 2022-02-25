@@ -1,0 +1,6 @@
+- name: enable ntp
+  shell: |
+    sudo timedatectl set-ntp true
+     
+  become: true
+  become_user: ansible

@@ -9,4 +9,9 @@
     name: docker
     enabled: yes
     state: started
-    
+
+- name: Enable time sync service
+  service:
+    name: systemd-timesyncd
+    enabled: yes
+    state: started
