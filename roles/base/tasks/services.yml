@@ -1,9 +1,15 @@
 - name: Enable Cronie service
   service:
-    name: cronie
+    name: cron
     enabled: yes
     state: started
   
+- name: Disable ssh service
+  service:
+    name: ssh
+    enabled: no
+    state: stopped
+    
 - name: Enable Docker service
   service:
     name: docker

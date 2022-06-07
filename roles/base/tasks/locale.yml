@@ -8,18 +8,18 @@
     name: pt_BR.UTF-8
     state: present
     
-- name: set up sudo for user felipe
+- name: Set default locale
   copy: 
-    src: ../files/locale.conf
-    dest: /etc/locale.conf
+    src: ../files/locale
+    dest: /etc/default/locale
     owner: root
     group: root
     mode: 0440
     
-- name: set default vconsole keymap
+- name: Set default keyboard
   copy: 
-    src: ../files/vconsole.conf
-    dest: /etc/vconsole.conf
+    src: ../files/keyboard
+    dest: /etc/default/keyboard
     owner: root
     group: root
     mode: 0440

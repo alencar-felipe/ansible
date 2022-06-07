@@ -1,33 +1,54 @@
 - name: install base packages
   package: 
     name:
+      # System provisioning ===================================================#
+
       - git
       - ansible
-      - cronie
-      - wget
-      - curl
-      - nano
-      - vim
+      - cron
+      - anacron
+      - openssh-client
+      - openssh-server
+      - openssh-sftp-server
+      #- docker
+      
+      # Unix utilities ========================================================#
+      
       - man-db
-      - man-pages
-      - usbutils
-      - net-tools
-      - inetutils
-      - nmap
+      - manpages-dev
       - lsof
-      - openssh
-      - rsync
-      - ntfs-3g
-      - openvpn
-      - python
-      - python-pip
-      - docker
-      - fakeroot
-      - go
-      - base-devel
-      - gcc
-      - make
-      - iftop
+      - nano
       - jq
       - moreutils
-      - linux-headers
+
+      # Network ===============================================================#
+
+      - wget
+      - curl
+      - usbutils
+      - iproute2
+      - iputils-ping
+      - traceroute
+      - nmap
+      - openvpn
+      - iftop
+
+      # Build tools ===========================================================#
+
+      - gcc
+      - make
+      - python3
+      - python3-pip
+      - python-is-python3
+
+      # Files =================================================================#
+
+      - rsync
+      - ntfs-3g
+      
+      
+
+      
+    
+      
+      

@@ -1,6 +1,6 @@
 - name: ansible-pull cron job
   cron:
-    name: ansible auto-provision
-    user: ansible
+    name: ansible-pull
+    user: root
     minute: "*/45"
-    job: sudo ansible-pull -o -U https://github.com/alencar-felipe/ansible
+    job: ansible-pull -o -U https://github.com/alencar-felipe/ansible
