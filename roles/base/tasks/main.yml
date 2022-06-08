@@ -7,6 +7,9 @@
 - name: include roles/base/tasks/packages.yml
   import_tasks: packages.yml
   
+- name: include roles/base/tasks/docker.yml
+  import_tasks: docker.yml
+  
 - name: include roles/base/tasks/users.yml
   import_tasks: users.yml
   

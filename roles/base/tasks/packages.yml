@@ -10,7 +10,6 @@
       - openssh-client
       - openssh-server
       - openssh-sftp-server
-      #- docker
       
       # Unix utilities ========================================================#
       
@@ -46,9 +45,11 @@
       - rsync
       - ntfs-3g
       
-      
+      # Suff for apt ==========================================================# 
 
-      
+      - ca-certificates
+      - gnupg
+      - lsb-release
     
       
       
