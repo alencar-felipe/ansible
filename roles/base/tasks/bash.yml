@@ -4,4 +4,9 @@
     dest: /home/felipe/.bashrc
     owner: felipe
 
+- name: git bash completion
+  file:
+    src: "/usr/share/bash-completion/completions/git"
+    dest: "/etc/bash_completion.d/git"
+    state: link
 
